@@ -6,7 +6,7 @@
 
 ```bash
 # Clone the repository
-git clone --depth=1 https://github.com/radchukd/stackx <project_name>
+git clone --depth=1 https://github.com/radchukd/graphql-typescript-starter <project_name>
 
 # Install dependencies
 cd <project_name> && npm install
