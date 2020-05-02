@@ -84,8 +84,8 @@ Runs compiled app in production mode
 │   │   └── secrets.ts
 │   ├── graphql
 │   │   ├── index.ts
-│   │   ├── rootValue.ts
-│   │   └── schema.ts
+│   │   ├── resolvers.ts
+│   │   └── typeDefs.ts
 │   ├── types
 │   │   └── index.ts
 │   ├── util
