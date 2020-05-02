@@ -65,7 +65,8 @@ Runs compiled app in production mode
 
 - Eslint
 - Express
-- GraphQL(+ Code Generator)
+- Apollo Server
+- GraphQL Code Generator
 - Jest
 - MongoDB
 - Node.js(+ Nodemon)
@@ -78,7 +79,7 @@ Runs compiled app in production mode
 ├── src
 │   ├── config
 │   │   ├── db.ts
-│   │   ├── graphqlServer.ts
+│   │   ├── apolloServer.ts
 │   │   ├── index.ts
 │   │   └── secrets.ts
 │   ├── graphql
