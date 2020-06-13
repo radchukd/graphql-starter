@@ -2,14 +2,23 @@
   "parser": "@typescript-eslint/parser",
   "plugins": [
     "security",
-    "prettier",
+    "import",
     "@typescript-eslint"
   ],
   "extends": [
     "airbnb/base",
+    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:security/recommended"
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:security/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint",
+    "prettier"
   ],
+  "env": {
+    "es6": true,
+    "node": true
+  },
   "ignorePatterns": [
     "dist",
     "node_modules",
@@ -18,6 +27,20 @@
     "src/types/generated.ts"
   ],
   "rules": {
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "groups": [
+          "builtin",
+          "external",
+          "index",
+          "internal",
+          "parent",
+          "sibling"
+        ]
+      }
+    ],
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-explicit-any": 1,
     "@typescript-eslint/no-inferrable-types": [

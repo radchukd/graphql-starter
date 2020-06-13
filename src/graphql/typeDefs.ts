@@ -7,8 +7,6 @@ const queryTypeDefs: DocumentNode = gql`
   }
 `;
 
-const typeDefs: DocumentNode[] = [
-  queryTypeDefs,
-];
+const typeDefs: DocumentNode[] = [queryTypeDefs];
 
 export default typeDefs;

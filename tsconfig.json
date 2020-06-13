@@ -5,9 +5,8 @@
     "moduleResolution": "node",
     "outDir": "dist",
     "sourceMap": true,
-    "target": "esnext"
+    "strict": true,
+    "target": "ES2019"
   },
-  "include": [
-    "src/**/*"
-  ],
+  "include": ["src/**/*"],
 }

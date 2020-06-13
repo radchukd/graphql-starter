@@ -11,8 +11,10 @@ const isSecure = (req: Request) => {
 };
 
 export const httpsRedirect = (redirectLocalhost = false) => (
-  req: Request, res: Response, next: NextFunction,
-) => {
+  req: Request,
+  res: Response,
+  next: NextFunction,
+): void => {
   if (req.hostname === 'localhost' && !redirectLocalhost) {
     return next();
   }
@@ -23,8 +25,17 @@ export const httpsRedirect = (redirectLocalhost = false) => (
   return res.redirect(`https://${req.hostname}${req.originalUrl}`);
 };
 
-export const wwwRedirect = () => (req: Request, res: Response, next: NextFunction) => {
-  if (req.headers && req.headers.host && req.headers.host.match && req.headers.host.match(/^www/) !== null) {
+export const wwwRedirect = () => (
+  req: Request,
+  res: Response,
+  next: NextFunction,
+): void => {
+  if (
+    req.headers &&
+    req.headers.host &&
+    req.headers.host.match &&
+    req.headers.host.match(/^www/) !== null
+  ) {
     res.redirect(`https://${req.headers.host.replace(/^www\./, '')}${req.url}`);
   }
 

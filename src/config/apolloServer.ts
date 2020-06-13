@@ -1,12 +1,16 @@
 import { ApolloServer } from 'apollo-server-express';
 import depthLimit from 'graphql-depth-limit';
-import { Request } from 'express';
+import { Request, Response } from 'express';
+
 import schema from '../graphql';
+
 import { NODE_ENV } from './secrets';
 
-const context = async ({ req }: { req: Request }): Promise<object> => {
-  console.log(req);
-  return null;
+type IntegrationContext = { req: Request; res: Response };
+type ContextFn = (ctx: IntegrationContext) => Promise<Record<string, unknown>>;
+
+const context: ContextFn = async ({ req }) => {
+  return { req };
 };
 
 const apolloServer: ApolloServer = new ApolloServer({

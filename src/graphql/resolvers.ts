@@ -1,6 +1,11 @@
 const resolvers = {
   Query: {
-    HelloWorld: (parent, args, context, info) => 'Hello world!',
+    HelloWorld: (
+      _parent: unknown,
+      _args: unknown,
+      _context: unknown,
+      _info: unknown,
+    ): string => 'Hello world!',
   },
 };
 

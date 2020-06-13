@@ -4,6 +4,7 @@ import express from 'express';
 import helmet from 'helmet';
 import bodyParser from 'body-parser';
 import rateLimit from 'express-rate-limit';
+
 import {
   db,
   PORT,
@@ -28,6 +29,6 @@ if (NODE_ENV === 'production') {
 }
 
 apolloServer.applyMiddleware({ app, path: '/graphql' });
-app.listen(PORT, async () => { await db.init(); });
+app.listen(PORT, async () => db.init());
 
 export default app;
