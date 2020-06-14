@@ -1,19 +1,13 @@
 {
-  "name": "graphql-typescript-starter",
+  "name": "graphql-starter",
   "version": "1.0.0",
   "license": "MIT",
-  "keywords": [
-    "node",
-    "typescript",
-    "express",
-    "graphql"
-  ],
   "lint-staged": {
     "src/**/*.ts": ["yarn lint"]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsc --noEmit && lint-staged"
+      "pre-commit": "yarn type-check && lint-staged"
     }
   },
   "scripts": {

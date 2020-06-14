@@ -4,10 +4,6 @@ module.exports = {
   verbose: true,
   collectCoverage: true,
   coverageDirectory: './test/coverage',
-  transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-  },
-  testMatch: [
-    '**/test/**/*.test.{ts,tsx}',
-  ],
+  transform: { '^.+\\.ts$': 'ts-jest' },
+  testMatch: ['**/test/**/*.test.ts'],
 };

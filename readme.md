@@ -1,4 +1,20 @@
-# Graphql typescript starter
+# Graphql starter
+
+Server template for project using graphql
+
+## Included Packages
+
+- Apollo Server
+- Apollo Server Testing
+- Eslint
+- Express
+- GraphQL Code Generator
+- Husky
+- Jest
+- MongoDB
+- Nodemon
+- Prettier
+- Typescript
 
 ## Getting started
 
@@ -6,16 +22,16 @@
 
 ```bash
 # Clone the repository
-git clone --depth=1 https://github.com/radchukd/graphql-typescript-starter <project_name>
+git clone --depth=1 https://github.com/radchukd/graphql-starter <project_name>
 
 # Install dependencies
-cd <project_name> && npm install
+cd <project_name> && yarn install
 
 # Configure .env
 cp .env.example .env
 
 # Build and run the project
-npm run build && npm run start
+yarn build && yarn start
 ```
 
 ### Docker
@@ -33,74 +49,38 @@ npm run build && npm run start
 
 In the project directory, you can run:
 
-### `npm run build`
+### `yarn build`
 
-Compiles the app into esnext.
+Compiles the app
 
-### `npm run debug`
+### `yarn debug`
 
 Runs compiled app in debug mode
 
-### `npm run dev`
+### `yarn dev`
 
-Runs uncompiled app in development mode.
+Runs uncompiled app in development mode
 
-### `npm run generate`
+### `yarn generate`
 
-Generates graphql types into src/types/generated.ts
+Generates schema types for typescript
 
-### `npm run lint`
+### `yarn lint`
 
-Lints src and test folders
+Lints src files
 
-### `npm run test`
+### `yarn lint-fix`
+
+Fixes src files
+
+### `yarn test`
 
 Runs tests
 
-### `npm run start`
+### `yarn type-check`
+
+Checks app for type errors
+
+### `yarn start`
 
 Runs compiled app in production mode
-
-## What’s Included?
-
-- Eslint
-- Express
-- Apollo Server
-- GraphQL Code Generator
-- Jest
-- MongoDB
-- Node.js(+ Nodemon)
-- Typescript
-
-## Project structure
-
-```
-├── dist/
-├── src
-│   ├── config
-│   │   ├── db.ts
-│   │   ├── apolloServer.ts
-│   │   ├── index.ts
-│   │   └── secrets.ts
-│   ├── graphql
-│   │   ├── index.ts
-│   │   ├── resolvers.ts
-│   │   └── typeDefs.ts
-│   ├── types
-│   │   └── index.ts
-│   ├── util
-│   │   └── index.ts
-│   └── index.ts
-├── test/
-├── codegen.json
-├── Dockerfile
-├── .dockerignore
-├── .env.example
-├── .eslintrc
-├── .gitignore
-├── jest.config.js
-├── package.json
-├── package-lock.json
-├── readme.md
-└── tsconfig.json
-```
