@@ -41,7 +41,7 @@ yarn build && yarn start
   docker build -t <image_name> .
 
   # Run image
-  docker run -p 5001:5001 <image_id>
+  docker run -p 3001:3001 <image_id>
 
 ```
 

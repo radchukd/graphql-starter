@@ -12,8 +12,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "debug": "nodemon --inspect dist/index.js",
-    "dev": "nodemon src/index.ts --watch src",
+    "debug": "NODE_ENV=development nodemon --inspect dist/index.js",
+    "dev": "NODE_ENV=development nodemon src/index.ts --watch src",
     "generate": "graphql-codegen --config codegen.json",
     "lint": "eslint \"src/**/*.ts\"",
     "lint-fix": "eslint \"src/**/*.ts\" --fix",
