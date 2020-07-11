@@ -4,7 +4,7 @@ Server template for project using graphql
 
 ## Included Packages
 
-- Apollo Server
+- Apollo Server Express
 - Apollo Server Testing
 - Eslint
 - Express
@@ -51,36 +51,18 @@ In the project directory, you can run:
 
 ### `yarn build`
 
-Compiles the app
-
 ### `yarn debug`
-
-Runs compiled app in debug mode
 
 ### `yarn dev`
 
-Runs uncompiled app in development mode
-
 ### `yarn generate`
-
-Generates schema types for typescript
 
 ### `yarn lint`
 
-Lints src files
-
 ### `yarn lint-fix`
-
-Fixes src files
 
 ### `yarn test`
 
-Runs tests
-
 ### `yarn type-check`
 
-Checks app for type errors
-
 ### `yarn start`
-
-Runs compiled app in production mode

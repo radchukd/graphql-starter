@@ -1,4 +1,3 @@
-import compression from 'compression';
 import cors from 'cors';
 import express from 'express';
 import helmet from 'helmet';
@@ -16,7 +15,6 @@ import {
 
 const app = express();
 app.use(cors());
-app.use(compression());
 app.use(helmet());
 app.use(helmet.permittedCrossDomainPolicies());
 app.use(bodyParser.json());
